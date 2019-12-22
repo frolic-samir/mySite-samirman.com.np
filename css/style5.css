@@ -2,29 +2,33 @@ body{
     background-color:rgb(126, 86, 86);
 }
 .container{
-    position: absolute;
-    width: 300px;
-    left: 500px;
-    margin-top: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.6em;
-    background-color: gray;
-    height: 380px;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: #fff;
-    border-radius: 20px;
-    z-index: -1;
+    	display: grid;
+	grid-template-columns:38% 22% 40%;
+	grid-template-rows:24% 400px;
+	grid-template-areas:
+		"logo . ."
+		". mid .";
+	grid-gap:5px;
+}
+
+.mid{
+	grid-area: mid;
+    	font-family: Arial, Helvetica, sans-serif;
+	border-radius:25px; 
+	height:400px;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color:#fff;
 }
 
 .logo{
-    position: absolute;
-    margin-left: 622px;
-    margin-top: 79px;
-    opacity: 0.8;
+	grid-area: logo;
+	opacity: 0.8;
+	position: absolute;
+	top: 14%;
+	left: 47%;
 }
 img{
     border-radius: 25px;
@@ -32,7 +36,7 @@ img{
 
 a{
     text-decoration: none;
-    color: #fff;
+	    color: #fff;
 }
 .fp{
     font-size: 14px;
@@ -42,14 +46,16 @@ a{
 input[type='text'],input[type='password']{
     width: 98%;
     height: 1.5em;
+    background: none;
+    color: white;
     border-radius: 20px;
     font-size: 1em;
     text-indent: 0.6em;
     outline: none;
+    margin-bottom: 9px;
 }
 
 input[type='submit']{
-    margin-top: 8px;
     margin-left: 5px;
     border-radius: 10px;
     font-size: 0.9em;
