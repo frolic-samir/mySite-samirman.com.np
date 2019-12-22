@@ -69,3 +69,37 @@ input[type='submit']{
 .my-form{
     padding: 70px 5px 40px 10px;
 }
+
+@media screen and (max-width:350px){
+	.container{
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"logo"
+		"mid";
+}
+	.fp{
+	padding-left: 22.3%;
+}
+}
+@media screen and (max-width:450px){
+	.container{
+	grid-template-columns:13% 70%;
+	grid-template-areas:
+		"logo ."
+		". mid";
+}
+	.fp{
+	padding-left: 22.3%;
+}
+}
+@media screen and (max-width:500px){
+	.container{
+	grid-template-columns:20% 58%;
+	grid-template-areas:
+		"logo ."
+		". mid";
+}
+	.fp{
+	padding-left: 22.3%;
+}
+}
