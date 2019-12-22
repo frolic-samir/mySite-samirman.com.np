@@ -1,0 +1,65 @@
+body{
+    background-color:rgb(126, 86, 86);
+}
+.container{
+    position: absolute;
+    width: 300px;
+    left: 500px;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    background-color: gray;
+    height: 380px;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.logo{
+    position: absolute;
+    margin-left: 622px;
+    margin-top: 79px;
+    opacity: 0.8;
+}
+img{
+    border-radius: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.fp{
+    font-size: 14px;
+    padding-left: 90px;    
+}
+
+input[type='text'],input[type='password']{
+    width: 100%;
+    height: 1.5em;
+    border-radius: 20px;
+    font-size: 1em;
+    text-indent: 0.6em;
+    outline: none;
+}
+
+input[type='submit']{
+    margin-top: 8px;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.lbl{
+    padding-left: 5px;
+}
+
+.my-form{
+    padding: 70px 5px 40px 10px;
+}
