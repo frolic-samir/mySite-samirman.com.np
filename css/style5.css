@@ -1,105 +1,134 @@
 body{
-    background-color:rgb(126, 86, 86);
+    background-color: rgb(170, 167, 167);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.4rem;   
+    margin: 0;
+    width: 100%;
 }
+
 .container{
-    	display: grid;
-	grid-template-columns:38% 22% 40%;
-	grid-template-rows:24% 400px;
-	grid-template-areas:
-		"logo . ."
-		". mid .";
-	grid-gap:5px;
+    display: grid;
+    grid-template-areas: 
+    "sidebar"
+    "content"
+    "footer";
+    height: 100vh;
 }
 
-.mid{
-	grid-area: mid;
-    	font-family: Arial, Helvetica, sans-serif;
-	border-radius:25px; 
-	height:400px;
-	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	color:#fff;
+.sidebar{
+    grid-area: sidebar;
+    background: linear-gradient(
+        rgb(190, 121, 159),
+        rgb(180, 102, 145),
+        rgb(151, 75, 117),
+        rgba(141, 63, 106, 0.911)
+    );
 }
 
-.logo{
-	grid-area: logo;
-	opacity: 0.8;
-	position: absolute;
-	top: 14%;
-	left: 47%;
-}
-img{
-    border-radius: 25px;
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
 a{
-    text-decoration: none;
-	    color: #fff;
-}
-.fp{
-    font-size: 14px;
-    padding-left: 90px;    
-}
-
-input[type='text'],input[type='password']{
-    width: 98%;
-    height: 1.5em;
-    background: none;
     color: white;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 1;
+    
+}
+.content{    
+    grid-area: content;
+    margin: 15px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+.container img{
+    border-radius: 50%;    
+    width: 220px;
+    height: 220px;
+}
+
+.footer{
+    grid-area: footer;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    opacity: .8;
+    height: 90px;
+    align-self: flex-end;
+
+}
+#hireme{
+    text-decoration: none;
+    color: white;
+    background: rgb(121, 64, 196);
+    padding: 6px 20px;
     border-radius: 20px;
-    font-size: 1em;
-    text-indent: 0.6em;
-    outline: none;
-    margin-bottom: 9px;
+    
+}
+#hireme:hover{
+    transition:all .4s;
+    border:3px solid rgb(121, 64, 196);
+    background: linear-gradient(to right, red, white);
+    
+    color: rgb(235, 238, 235);
+    background-color: white;
+    
 }
 
-input[type='submit']{
-    margin-left: 5px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    outline: none;
+img{
+    width: 20px;
+    height: 20px;
 }
 
-.lbl{
-    padding-left: 5px;
-}
-
-.my-form{
-    padding: 70px 5px 40px 10px;
-}
-
-@media screen and (max-width:350px){
-	.container{
-	grid-template-columns: 100%;
-	grid-template-areas:
-		"logo"
-		"mid";
-}
-	.fp{
-	padding-left: 22.3%;
-}
-}
-@media screen and (max-width:450px){
-	.container{
-	grid-template-columns:13% 70%;
-	grid-template-areas:
-		"logo ."
-		". mid";
-}
-	.fp{
-	padding-left: 22.3%;
-}
-}
-@media screen and (max-width:500px){
-	.container{
-	grid-template-columns:20% 58%;
-	grid-template-areas:
-		"logo ."
-		". mid";
-}
-	.fp{
-	padding-left: 22.3%;
-}
+@media (min-width:682px){
+    .container{
+        grid-template-columns: 13rem auto;
+        grid-template-areas: 
+        "sidebar content"
+        "sidebar footer";
+        height: 100vh;
+        text-align: left;
+    }
+    .sidebar{
+        grid-area: sidebar;   
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 4.5rem;
+    }
+    ul li{
+        padding-bottom: 3rem;
+    }
+    .content{
+        grid-area: content;
+        display: grid;
+        grid-template-areas: "hero dp";
+        grid-gap: 10px;
+    }
+    .dp{
+        grid-area: dp;        
+        align-self: center;
+    }
+    
+    .hero{
+        grid-area: hero;
+        align-self: center;
+        text-align: left;
+    }
+    .hero p{
+        padding: 20px 0;
+    }
+    .footer{
+        grid-area: footer;
+    }
 }
