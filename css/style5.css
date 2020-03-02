@@ -64,7 +64,6 @@ a:hover{
     opacity: .8;
     height: 90px;
     align-self: flex-end;
-
 }
 #hireme{
     text-decoration: none;
@@ -87,6 +86,11 @@ a:hover{
 img{
     width: 20px;
     height: 20px;
+}
+
+.fab{
+    padding: 10px 3px;
+    font-size: 23px;
 }
 
 @media (min-width:682px){
